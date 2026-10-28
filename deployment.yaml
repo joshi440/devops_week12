@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: student-registration
-          image: joshithachilukuri/student-registration:v1
+          image: joshitha2404/student-registration:v1
           imagePullPolicy: Always
 
           ports:
