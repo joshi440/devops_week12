@@ -1,0 +1,27 @@
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: student-registration-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: student-registration
+
+  template:
+    metadata:
+      labels:
+        app: student-registration
+
+    spec:
+      containers:
+        - name: student-registration
+          image: joshithachilukuri/student-registration:v1
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 5000
